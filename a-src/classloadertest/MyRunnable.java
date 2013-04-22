@@ -13,7 +13,7 @@ public class MyRunnable implements Runnable {
 
 	@Override
 	public void run() {
-		System.out.println("Thread " + name + ": running");
+		System.out.println("Run " + name + ": running");
 
 		// Set the object in the cache
 		A a = new A(name);
@@ -21,6 +21,6 @@ public class MyRunnable implements Runnable {
 
 		// Read the object from the cache which may be differed from above if it had already been set.
 		A cached = (A) cache.get("key");
-		System.out.println("Thread " + name + ": cache[\"key\"] = " + cached.toString());
+		System.out.println("Run " + name + ": cache[\"key\"] = " + cached.toString());
 	}
 }
